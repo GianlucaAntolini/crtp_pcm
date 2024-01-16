@@ -1,6 +1,8 @@
 Exercise for Concurrent and Real Time Programming Course in Computer Engineering Master's Degree at UNIPD
 
 
+
+
 **EXCERCISE 3** of the proposed excercises:
 Producer-(multiple) consumers program with remote status monitoring. The producer and 
 the consumers shall be implemented as threads and the message queue will be hosted in 
@@ -16,17 +18,27 @@ client and periodically sending the information collected by the monitor thread.
 
 **SOLUTION:**
 
+
+
+
 **ARCHITECTURE:**
-![alt text](https://github.com/GianlucaAntolini/crtp_pcm/architecture.png)
+
+![alt text](https://github.com/GianlucaAntolini/crtp_pcm/blob/main/architecture.png)
                            
 
+
+
 **MAKEFILE:**
+
 Compiles main.c and monitor.c with also -phtreads flag
 
 launch 'make' command to compile
 launch 'rm' command to remove all compiled files
 
+
+
 **SERVER:**
+
 Parameters:
 - sampling interval in seconds
 - number of consumers
@@ -46,7 +58,10 @@ launch command './server 5 3 10 1000' to execute the server (example parameters)
 
 
 
+
+
 **CLIENT:**
+
 Parameters:
 - number of consumers
 - max number of message client wants to receive
