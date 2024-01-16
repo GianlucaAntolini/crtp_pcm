@@ -4,6 +4,7 @@ Exercise for Concurrent and Real Time Programming Course in Computer Engineering
 
 
 **EXCERCISE 3** of the proposed excercises:
+
 Producer-(multiple) consumers program with remote status monitoring. The producer and 
 the consumers shall be implemented as threads and the message queue will be hosted in 
 shared memory. Another thread, separate from the producer and the consumers, shall 
