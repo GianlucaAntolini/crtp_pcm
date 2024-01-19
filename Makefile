@@ -1,15 +1,16 @@
-PROGRAMS = main \
-		   monitor
+PROGRAMS = server \
+		   client
 
-FLAGS = -pthread
+CFLAGS = -pthread
+
 
 all: $(PROGRAMS)
 
-main: main.c
-	cc $(FLAGS) $^ -o $@
+server: server.c
+	cc $(CFLAGS) $^ -o $@
 
-monitor: monitor.c
-	cc $(FLAGS) $^ -o $@
+client: client.c
+	cc $(CFLAGS) $^ -o $@
 
 rm:
 	rm -f $(PROGRAMS)
