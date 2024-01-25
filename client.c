@@ -72,10 +72,8 @@ int main(int argc, char *args[]) {
 
     // Loop for the number of max_msgs specified in the command line
     while (max_msgs != 0) {
-        printf("WHILE: M: %d\n", max_msgs);
         // Receive data from the server, check error
         const int rcvd = recv_edit(socket_fd, (char *)&monitor_msg, sizeof(monitor_msg));
-        printf("WHILE: RCVD: %d\n", rcvd);
         if (rcvd < 0) {
             printf("MONITOR CLIENT ---> ERROR RECEIVING MESSAGES, CLOSING CONNECTION\n");
             break;

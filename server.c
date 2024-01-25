@@ -90,16 +90,18 @@ void *client_handler(void *arg) {
             printf("CLIENT HANDLER ---> client %d disconnected\n", client_index);
             break;
         }
-        
   
     }
-
 
     // Close the client socket and remove it from the array when done
     close(sockfd);
 
     pthread_mutex_lock(&clients_mutex);
     active_clients--;
+    // Fix the clients array
+    for (int i = client_index; i < active_clients; i++) {
+        clients[i] = clients[i + 1];
+    }
     pthread_mutex_unlock(&clients_mutex);
 
     return NULL;
