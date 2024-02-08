@@ -88,10 +88,13 @@ void *client_handler(void *arg) {
 
         if (strcmp(msg, "close") == 0) {
             printf("CLIENT HANDLER ---> client %d disconnected\n", client_index);
+
             break;
         }
+        
   
     }
+
 
     // Close the client socket and remove it from the array when done
     close(sockfd);
